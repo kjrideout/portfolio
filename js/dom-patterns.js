@@ -1,13 +1,14 @@
 function onLoad() {
-  let border_data = []
-  let color_data = {}
-
-}  
+  let pattern_data = [];
+  let color_data = [];
   
+  setupPattern(pattern_data);
+  setupColors(color_data);
+  makePattern(pattern_data, color_data);
 
-/*
-
-function runAnimation() {
+  document.querySelector('#speed').addEventListener('click', runAnimation());
+  
+  function runAnimation() {
     let speed = document.getElementById('speed').value;
     if (speed > 0) {
       shiftColors(color_data, 'forward');
@@ -91,87 +92,3 @@ function runAnimation() {
     }
   }
 }
-
-  
-  <div class="flex-container">
-
-    <div class="flex-child">
-    </div>
-    
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-    
-  </div>
-
-  <div class="flex-container">
-
-    <div class="flex-child">
-      
-    </div>
-    
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-    
-  </div>
-
-  <div class="flex-container">
-
-    <div class="flex-child">
-      
-    </div>
-    
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    <div class="flex-child">
-
-    </div>
-
-    */

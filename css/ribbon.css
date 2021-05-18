@@ -2,8 +2,10 @@
   height: 120px;
   width: 800px;
   background-color: grey;
-  border: solid black;
-  border-width: 7px 7px 7px 7px;
+  // border: solid black;
+  // border-width: 7px 7px 7px 7px;
+  // position: absolute;
+  z-index: -1000;
 }
 
 .flex-container {

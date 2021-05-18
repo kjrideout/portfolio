@@ -1,0 +1,59 @@
+#ribbonMaze {
+  height: 120px;
+  width: 800px;
+  background-color: grey;
+  border: solid black;
+  border-width: 7px 7px 7px 7px;
+}
+
+.flex-container {
+  display: flex;
+  height: 100px;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid red;
+}  
+
+.flex-child:first-child {
+  margin-right: 0px;
+} 
+
+.mazeSquare {
+  height: 33px;
+  width: 33px;
+  background-color: hotpink;
+  border: solid black;
+  border-width: 7px 7px 7px 7px;
+}
+
+.float-container {
+  width: auto;
+  height: 200px;
+  border: 3px solid #000000;
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border: 2px solid red;
+}  
+
+.b-rm-top {
+  border-top: 0;
+}
+
+.b-rm-right {
+  border-right: 0;
+}
+
+.b-rm-bottom {
+  border-bottom: 0;
+}
+
+.b-rm-left {
+  border-left: 0;
+}

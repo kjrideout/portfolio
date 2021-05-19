@@ -1,7 +1,7 @@
 function onLoad() {
-  let border_data = []
-  let color_data = {}
+  let cell_data = []
 
+  
 }  
   
 

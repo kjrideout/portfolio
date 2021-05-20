@@ -1,11 +1,38 @@
 function onLoad() {
   let cell_data = []
 
-  
-}  
-  
+  let ribbonWidth = document.querySelector("#ribbonMaze").offsetWidth;
+
+  console.log(ribbonWidth);
+
+  //let mazeWidth = document.querySelector('#ribbonMaze');
+
+  //console.log(mazeWidth);
+
+
+}
 
 /*
+
+user moves stick fig
+
+function to fill ribbon div redraws
+
+
+cells come in types
+
+no border
+1 border
+2 border
+3 border
+
+
+
+
+
+
+
+
 
 function runAnimation() {
     let speed = document.getElementById('speed').value;

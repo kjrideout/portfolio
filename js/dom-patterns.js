@@ -1,7 +1,7 @@
 function onLoad() {
   let pattern_data = [];
   let color_data = [];
-  
+
   setupPattern(pattern_data);
   setupColors(color_data);
   makePattern(pattern_data, color_data);

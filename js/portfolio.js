@@ -2,8 +2,17 @@ function onLoad() {
   let cell_data = []
 
   let ribbonWidth = document.querySelector("#ribbonMaze").offsetWidth;
+  let cellHeight = 60;
+  let numCellsWide = ribbonWidth / cellHeight;
+
 
   console.log(ribbonWidth);
+  console.log(numCellsWide);
+
+
+  
+
+
 
   //let mazeWidth = document.querySelector('#ribbonMaze');
 

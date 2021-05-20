@@ -2,13 +2,11 @@
   box-sizing: border-box;
 }
 
-/*
 #ribbonMaze {
   height: 420px;
   width: 100%;
   background-color: darkgray;
 }
-*/
 
 .cell {
   display: flex;
@@ -16,7 +14,7 @@
   align-items: center;
   height: 60px;
   width: 60px;
-  border: 10px solid red;
+  border: 5px solid red;
 }
 
 #stickfig {

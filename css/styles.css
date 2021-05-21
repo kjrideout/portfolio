@@ -9,7 +9,7 @@ body {
 
 .topbox-container {
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 20% 1fr;
 }
 
 .grid-container {
@@ -47,7 +47,6 @@ h3 {
   /* width will change with viewport*/
   width: 100%;  /* js will need to change */
   border: 5px solid darkgrey;
-
 }
 
 #stickfig {

@@ -1,11 +1,42 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 4px;
+}
+
+.topbox-container {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);  /*will need js to change*/
+}
+
+/*
+:not(.cell) {
+  margin: 1px;
+}
+*/
+
+h3 {
+  color:red;
 }
 
 #ribbonMaze {
-  height: 420px;
+  height: 360px;
+  /*
   width: 100%;
-  background-color: darkgray;
+  */
+  background-color: darkgrey;
+}
+
+.testBorder {
+  border: 3px solid purple
 }
 
 .cell {
@@ -13,8 +44,10 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  width: 60px;
-  border: 5px solid red;
+  /* width will change with viewport*/
+  width: 100%;  /* js will need to change */
+  border: 5px solid darkgrey;
+
 }
 
 #stickfig {
@@ -23,42 +56,6 @@
   margin: auto;
   display: block;
 }
-
-.flex-container {
-  display: flex;
-  height: 100px;
-}
-
-.flex-child {
-  flex: 1;
-  border: 2px solid red;
-}  
-
-.flex-child:first-child {
-  margin-right: 0px;
-} 
-
-.mazeSquare {
-  height: 33px;
-  width: 33px;
-  background-color: hotpink;
-  border: solid black;
-  border-width: 7px 7px 7px 7px;
-}
-
-.float-container {
-  width: auto;
-  height: 200px;
-  border: 3px solid #000000;
-  padding: 20px;
-}
-
-.float-child {
-  width: 50%;
-  float: left;
-  padding: 20px;
-  border: 2px solid red;
-}  
 
 .cell-rm-t {
   border-top: 0;
@@ -73,5 +70,9 @@
 }
 
 .cell-rm-l {
+  border-left: 0;
+}
+
+.cell-rm-all {
   border-left: 0;
 }

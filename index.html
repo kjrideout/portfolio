@@ -18,30 +18,23 @@
   
   <link rel="stylesheet" href="css/styles.css" />
 
-  <title>Portfolio Rideout</title>
+  <title>Rideout's Game</title>
 </head>
 
 <body onload="onLoad()">
-  <div id=hiddenTop>
-    <!--copied from developer.mozilla.org to learn resize event-->
-    <p>Resize the browser window to fire the <code>resize</code> event.</p>
-    <p>Window height: <span id="height"></span></p>
-    <p>Window width: <span id="width"></span></p>
-  </div>
-
   <div id=topgroup>
     <div id=topbox class="topbox-container">
       <div id=topLinks class="grid-child testBorder">
         <h3>.art</h3>
-          play, inspire, peacock
+          play, inspire, show off
         <h3>.design</h3>
           build, learn, discover
         <h3>.blog</h3>
           study, blab, network 
       </div>
       <div id=treasureChest style="border: 15px solid orange;">
-        <h2>Portfolio Rideout<h2>
-        </h3>-- A massively multiplayer metagame</h2>
+        <h2>Rideout's Game<h2>
+        </h3>-- A massively multiplayer online metagame</h2>
       </div>
     </div>
 
@@ -51,117 +44,16 @@
     </div>
   </div>  
   
-  <div id="ribbonMaze"">
-    <div class="grid-container" style="grid-gap: 0px">
-      <div class="grid-child cell">
+  <div id="ribbonMaze">
+    
+    
+    <div id=cellGrid class="grid-container" style="display: grid; grid-gap: 0px; grid-template-columns: repeat(17, 1fr);">
+      <div id="cell-0" class="grid-child cell">
         <a href="https://github.com/kjrideout">
           <img src="img/stickfig.png" id="stickfig">
         </a>
       </div>
-      
-      <!--js will append cells divs from here
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-        <div class="grid-child cell"></div>
-      -->
+      <!--remaining divs for this element will be inserted by js-->
     </div>
   </div>
 

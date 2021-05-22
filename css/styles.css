@@ -12,11 +12,6 @@ body {
   grid-template-columns: 20% 1fr;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(17, 1fr);  /*will need js to change*/
-}
-
 /*
 :not(.cell) {
   margin: 1px;
@@ -44,9 +39,8 @@ h3 {
   justify-content: center;
   align-items: center;
   height: 60px;
-  /* width will change with viewport*/
-  width: 100%;  /* js will need to change */
-  border: 5px solid darkgrey;
+  width: 100%;
+  border: 5px solid red;
 }
 
 #stickfig {

@@ -1,60 +1,41 @@
 function onLoad() {
   
-  reshapeMaze();
-  window.addEventListener('resize', reshapeMaze);
+  redrawMaze();
+  window.addEventListener('resize', reloadPage);
 
-  function reshapeMaze() {
+  // just reload the page for now until you get window redraw working
+  function reloadPage() {
+    window.onresize = function(){ location.reload(); }
+  }
+  
+  // can only use once
+  // not finished yet becuase you need to figure out how to clear the maze out
+  function redrawMaze() {
 
     const cellHeight = 60; //learn to pass this
     const newWidth = window.innerWidth;
-    const newHeight = window.innerHeight;
-    
-    // record these to the hidden #dataDiv
-    document.querySelector('#width').textContent = newWidth;
-    document.querySelector('#height').textContent = newHeight;
+    const ribbonHeight = document.getElementById('ribbonMaze').offsetHeight;
 
-    let numCellsWide = Math.floor(newWidth / (cellHeight * 0.97));
+    const numCellsHigh = Math.floor(ribbonHeight / cellHeight);
+    console.log(numCellsHigh);
 
-    //track for reference
+    const numCellsWide = Math.floor(newWidth / (cellHeight * 0.97));
     console.log(numCellsWide);
 
+    const numCells = numCellsHigh * numCellsWide;
+    console.log(numCells);
 
+    let cellGridContent = document.getElementById('cellGrid');
+    cellGridContent.style.gridTemplateColumns = "repeat(" + numCellsWide + ", 1fr)";
+    
+    oldNumCells = cellGridContent.childElementCount;
 
-
+    for (let i = cellGridContent.childElementCount; i < numCells; i++) {
+      const newCell = document.createElement('div');
+      newCell.id = "cell-" + i;
+      newCell.className = "grid-child cell";
+      cellGridContent.appendChild(newCell);
+    }
+    console.log(cellGridContent);
   }
-
 }
-
-
-
-
-
-  //window.addEventListener('resize', reportWindowSize);
- /*
-  function reportWindowSize() {  //will pass variable
-    const cellHeight = 60; //learn to pass this value
-
-    widthOutput.textContent = window.innerWidth;
-    heightOutput.textContent = window.innerHeight;
-  }
-  
-
-  window.onresize = reportWindowSize();
-  console.log(reportWindowSize());
-
-  const dataDiv = document.getElementById("hiddenTop");
-  // dataDiv.style.display = "none";
-
-
-  //let numCellsWide = Math.floor(widthOutput / (cellHeight * 0.97) );
-
-  
-
-  //insert cell divs
-  const newMazeCells = document.createElement('div');
-  newMazeCells.id = 'frame';
-  newMazeCells.className ='grid-child testBorder';
-
-  // console.log(numCellsWide);
-
-  */

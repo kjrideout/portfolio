@@ -3,13 +3,28 @@
   margin: 0;
 }
 
+#gameGrid {
+  display: grid;
+  grid-gap: 0px;
+  height: 360px;
+  background-color: darkgrey;
+}
+
+.row {
+  border:2px solid darkred;
+}
+
+.col {
+  border:2px solid orange;
+}
+
 body {
   margin: 4px;
 }
 
 .topbox-container {
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: 25% 1fr;
 }
 
 /*
@@ -22,25 +37,16 @@ h3 {
   color:red;
 }
 
-#ribbonMaze {
-  height: 360px;
-  /*
-  width: 100%;
-  */
-  background-color: darkgrey;
-}
-
 .testBorder {
   border: 3px solid purple
 }
 
 .cell {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 60px;
-  width: 100%;
-  border: 5px solid red;
+  border: 3px solid red;
 }
 
 #stickfig {

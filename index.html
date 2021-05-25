@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required meta tags always come first -->
+  <!--required meta tags-->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap CSS -->
+  <!--build:css css/main.css-->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-  <!-- Additional CSS must be placed after Bootstrap CSS -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-
-  <!--
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-  -->
-  
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <!--endbuild-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
   <title>Rideout's Game</title>
 </head>
 
 <body onload="onLoad()">
-  <div id=topgroup>
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-sm-9 order-sm-last">
+        <h2>Rideout's Game<h2>
+        </h3>-- A massively multiplayer metagame</h2>
+      </div>
+
+      <div class="col-sm-3">
+        <h3>.art</h3>
+        play, inspire, show off
+        <h3>.design</h3>
+        build, learn, discover
+        <h3>.blog</h3>
+        study, blab, network 
+      </div>
+    </div>
+  </header>
+  
+  <!--this one is hidden for now-->
+  <div id=topgroup style="display: none">
     <div id=topbox class="topbox-container">
       <div id=topLinks class="grid-child testBorder">
         <h3>.art</h3>
@@ -34,7 +48,7 @@
       </div>
       <div id=treasureChest style="border: 15px solid orange;">
         <h2>Rideout's Game<h2>
-        </h3>-- A massively multiplayer online metagame</h2>
+        </h3>-- A massively multiplayer metagame</h2>
       </div>
     </div>
 
@@ -44,24 +58,29 @@
     </div>
   </div>  
   
-  <div id="ribbonMaze">
-    
-    
-    <div id=cellGrid class="grid-container" style="display: grid; grid-gap: 0px; grid-template-columns: repeat(17, 1fr);">
-      <div id="cell-0" class="grid-child cell">
-        <a href="https://github.com/kjrideout">
-          <img src="img/stickfig.png" id="stickfig">
-        </a>
-      </div>
-      <!--remaining divs for this element will be inserted by js-->
+  <div id="gameArea">
+    <div>
+      <br>
+      <h1>RIDEOUT</h1>
+    </div>
+    <div id="gameGrid" class="grid-container">
+      <!--js will insert one div for each cell-->
     </div>
   </div>
 
   <div class="testBorder">
     <br>
-  </div>  
+  </div>
   
   <script src="js/portfolio.js"></script>
 </body>
 
 </html>
+
+<!--stickman
+      <div id="cell-0" class="grid-child cell">
+        <a href="https://github.com/kjrideout">
+          <img src="img/stickfig.png" id="stickfig">
+        </a>
+      </div>
+-->
